@@ -1,0 +1,25 @@
+<header><!DOCTYPE html>
+  <html>
+<head></head>
+    <body>   
+    <div class="topnav">
+      <!-- <a [routerLink]="['/data-binding-demo']"><i class="fa fa-home" aria-hidden="true"></i> Data Binding</a>
+      <a [routerLink]="['/derective-demo']"><i class="fa fa-contact" aria-hidden="true"></i> Derective</a>
+      <a [routerLink]="['/flex-demo']"><i class="fa fa-task" aria-hidden="true"></i>Flex</a>
+      <a [routerLink]="['/material-demo']">Material-Demo</a>
+      <a [routerLink]="['/pipe-demo']">Pipe-Demo</a>
+      <a [routerLink]="['/parent-demo']">Parent-Demo</a>
+      <a [routerLink]="['/observable-demo']">Observable-Demo</a>
+      <a [routerLink]="['/promise-demo']">promise-Demo</a>
+      <a [routerLink]="['/service-demo']">Service-Demo</a> -->
+      
+      <a *ngFor="let item of menu"
+       [routerLink]="['/' + item.url]"><i class="fa fa- {{item.icon}}" aria-hidden="true"></i> {{item.name}}
+      </a>
+    </div>    
+   </body>
+  </html>
+</header>
+<router-outlet></router-outlet>
+<footer>footer</footer>
+<!--databinding ,typescript-->

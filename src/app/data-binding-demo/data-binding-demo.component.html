@@ -1,0 +1,32 @@
+<p>String Interpolation</p>
+{{12+12}}
+{{12}}
+{{'helloworld'}}
+{{'12 + 12'}}
+{{'12'+'12'}}
+{{12 + '12'}}
+{{12*12}}
+{{helloworld}}-
+
+<h2>one way databinding</h2>
+<p>binding data from component to view</p>
+
+<h2>Two way databinding</h2>
+<p>binding data from component to view</p>
+<p>binding data from view to component</p>
+
+<input type="text" [(ngModel)]="twoway" name="" id="">
+<p>
+    Output:{{twoway}}
+</p>
+
+<h2>Property binding Data</h2>
+<input [type]="propertyVar" name="" id="">
+<p>
+    <!--[property] = "var"-->
+</p>
+<h2>Event Binding</h2>
+<!-- (event)="method()" -->
+<p>
+    <button (click)="clickMe">Click Me</button>
+</p>

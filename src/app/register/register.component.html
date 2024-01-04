@@ -1,0 +1,29 @@
+<div class="register-box">
+    <form #f="ngForm">
+        <div>
+            <label for="">name</label>
+            <input name="user" #user="ngModel" [(ngModel)]="employee.name" type="text" required minlength="2">
+            <div *ngIf="f.submitted && user.errors" class="invalid-feedback">
+                <div *ngIf="user.errors?.['required']">name is required</div>
+                <div *ngIf="user.errors?.['minlength']">minlength is 2</div>
+            </div>
+        </div>
+        <div>
+            <label for="">city</label>
+            <input name="city" #city="ngModel" [(ngModel)]="employee.city" type="text" required>
+            <div *ngIf="f.submitted && city.errors" class="invalid-feedback">
+                <div *ngIf="city.errors?.['required']">Please enter city</div>
+            </div>
+        </div>
+        <div>
+            <label for="">phone</label>
+            <input name="phone" #phone="ngModel" [(ngModel)]="employee.phone" type="text" required>
+            <div *ngIf="f.submitted && phone.errors" class="invalid-feedback">
+                <div *ngIf="phone.errors?.['required']">Please enter Phone</div>
+            </div>
+        </div>
+        <div>
+            <button (click)="submit(f)">{{empId ? 'Update' : 'Submit'}}</button>
+        </div>
+    </form>
+</div>

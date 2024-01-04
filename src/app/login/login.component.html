@@ -1,0 +1,23 @@
+<!--username/email and password-->
+<div class="login-box">
+    <form #f="ngForm">
+        <div>
+            <label for="">username</label>
+            <input name="user" #user="ngModel" [(ngModel)]="employee.username" type="text" required minlength="4">
+            <div *ngIf="f.submitted && user.errors" class="invalid-feedback">
+                <div *ngIf="user.errors?.['required']">username is required</div>
+                <div *ngIf="user.errors?.['minlength']">minlength is 4</div>
+            </div>
+        </div>
+        <div>
+            <label for="">Password</label>
+            <input name="pass" #pass="ngModel" [(ngModel)]="employee.password" type="text" required>
+            <div *ngIf="f.submitted && pass.errors" class="invalid-feedback">
+                <div *ngIf="pass.errors?.['required']">password is required</div>
+            </div>
+        </div>
+        <div>
+            <button (click)="submit(f)">Submit</button>
+        </div>
+    </form>
+</div>

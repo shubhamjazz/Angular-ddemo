@@ -1,0 +1,15 @@
+<p #viewChildDemo>parent-demo works!</p>
+
+<div>
+    <div>External Demo</div>
+    <app-test (childEvent)="parentMethod($event)" [regularInput]="someVarParent"
+    [childInput]="'some data from parent component'">
+    </app-test>
+</div>
+
+<button (click)="submit()">submit</button>
+
+<div>{{parentVar}}</div>
+
+<!-- Property Binding - input - Parent To Child -->
+<!-- Event Binding -Output - Child To Parent emit -->

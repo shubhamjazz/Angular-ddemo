@@ -1,0 +1,47 @@
+<p>pipe-demo works!</p>
+
+<h3>Date Pipe</h3>
+
+<p>Actual date: {{date}}</p>
+<p>date with pipe:{{date | date}}</p>
+
+<p>Parameterized Pipes</p>
+<p>date with pipe: {{date | date:'medium'}}</p>
+<p>date with pipe: {{date | date:'short'}}</p>
+<p>date with pipe: {{date | date:'long'}}</p>
+<p>date with pipe: {{date | date:'full'}}</p>
+<p>date with pipe: {{date | date:'shortDate'}}</p>
+<p>date with pipe: {{date | date:'mediumDate'}}</p>
+<p>date with pipe: {{date | date:'longDate'}}</p>
+<p>date with pipe: {{date | date:'fullDate'}}</p>
+<p>date with pipe: {{date | date:'shortTime'}}</p>
+<p>date with pipe: {{date | date:'mediumTime'}}</p>
+<p>date with pipe: {{date | date:'longTime'}}</p>
+<p>date with pipe: {{date | date:'fullTime'}}</p>
+
+
+<h3>JSON pipe</h3>
+{{employeeArr | json}}
+
+
+<h3>currency pipe</h3>
+{{3 | currency:'INR'}}
+
+<h2>Custom Pipes</h2>
+{{ 4 | rupee}}
+
+<h2>Pure and Impure Sort</h2>
+
+<p>
+    Orignal Array :{{sortArray}}
+</p>
+
+<p>
+    Array with pure sort:{{sortArray | pureSort}}
+</p>
+
+<p>
+    Array with Impure Sort:{{sortArray | impureSort}}
+</p>
+
+<button (click)="addNumber()">Click</button>

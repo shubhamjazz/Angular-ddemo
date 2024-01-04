@@ -1,0 +1,12 @@
+table {
+    width: 100%;
+  }
+.edit {
+  cursor: pointer;
+  color: green;
+}
+
+.delete{
+  @extend .edit;
+  color: red;
+}

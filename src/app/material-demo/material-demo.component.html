@@ -1,0 +1,61 @@
+<button mat-raised-button color="accent">Accent</button>
+
+<mat-list>
+    <mat-list-item>Item 1</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Item 2</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Item 3</mat-list-item>
+  </mat-list>
+
+  <h2>INPUTS</h2>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Ex. Pizza" value="Sushi">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+  </form>
+
+  <h2>PROGRESS BAR</h2>
+  determinate
+  <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+  <br><br>
+  indeterminate
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  <br><br>
+  buffer
+  <mat-progress-bar mode="buffer"></mat-progress-bar>
+  <br><br>
+  Query Progress Bar
+  <mat-progress-bar mode="query"></mat-progress-bar>
+  <br><br>
+
+  <h2>RADIO BUTTON</h2>
+  <mat-radio-group aria-label="Select an option">
+    <div>
+        <mat-radio-button value="1">Option 1</mat-radio-button>
+    </div>
+    <div>
+        <mat-radio-button value="2">Option 2</mat-radio-button>
+    </div>
+  </mat-radio-group>
+
+  <ol>
+    <li>
+      <mat-form-field>
+        <mat-label>What's your name?</mat-label>
+        <input matInput [(ngModel)]="name">
+      </mat-form-field>
+    </li>
+    <li>
+      <button mat-raised-button (click)="openDialog()">Pick one</button>
+    </li>
+    <li *ngIf="animal">
+      You chose: <em>{{animal}}</em>
+    </li>
+  </ol>

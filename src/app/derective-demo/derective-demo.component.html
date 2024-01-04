@@ -1,0 +1,52 @@
+<h1>derectives</h1>
+
+<h1>Ng For</h1>
+
+<p *ngFor="let items of employeeArr">
+    {{items.id}}
+</p>
+
+<h1>ng If</h1>
+
+<div *ngIf="true;else elseStmt">
+    If executed
+</div>
+
+<ng-template #elseStmt>
+    else executed
+</ng-template>
+
+<h1>ng Switch</h1>
+
+<div [ngSwitch] = "day2">
+    <div *ngSwitchCase = 0>Today is Sunday! Today is breakDay</div>
+    <div *ngSwitchCase = '1'><h2>Today is Monday!</h2></div>
+    <div *ngSwitchCase = '2'><h2>Today is Tuesday!</h2></div>
+    <div *ngSwitchCase = '3'><h2>Today is Wednesday!</h2></div>
+    <div *ngSwitchCase = '4'><h2>Today is Thursday!</h2></div>
+    <div *ngSwitchCase = '5'><h2>Today is Friday!</h2></div>
+    <div *ngSwitchCase = '6'><h2>Today is Saturday!</h2></div>
+    <div *ngSwitchDefault>Uh oh! Something went Wrong.</div>
+</div>
+
+<h1>Attribute Directive</h1>
+
+<div [ngClass]="{'color-blue': true, 'bg-yellow': true}">
+    ng class example
+</div>
+
+<div [ngStyle]="{'color':'red'}">
+    ng style example
+</div>
+
+<!--conditional ngClass-->
+<!--declare a variable isDisabled,isDisabled == true? 
+    color-green : color-red-->
+
+    <div [ngClass]="isDisabled ? 'color-green' :  'color-red'">
+        ng class another example
+    </div>
+
+    <h1>Custom Directive</h1>
+
+    <p appHightlight>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil est rerum ea!</p>

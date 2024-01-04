@@ -1,0 +1,70 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server-1",
+      "author": "typicode-1"
+    },
+    {
+      "id": 2,
+      "title": "json-server-2",
+      "author": "typicode-2",
+      "child": {
+        "name": "shubham"
+      }
+    },
+    {
+      "id": 3,
+      "title": "json-server-3",
+      "author": "typicode-3"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employee": [
+    {
+      "id": 1,
+      "name": "ajay",
+      "city": "pune",
+      "phone": "9828128108"
+    },
+    {
+      "id": 2,
+      "name": "dhurav",
+      "city": "Mumbai",
+      "phone": "6822328145"
+    },
+    {
+      "id": 3,
+      "name": "ketan",
+      "city": "Nagpur",
+      "phone": "7538128112"
+    },
+    {
+      "id": 4,
+      "name": "vaishali",
+      "city": "pune",
+      "phone": "9828128108"
+    },
+    {
+      "id": 5,
+      "name": "mohit",
+      "city": "Mumbai",
+      "phone": "6822328145"
+    },
+    {
+      "id": 6,
+      "name": "shiva",
+      "city": "Nagpur",
+      "phone": "7538128112"
+    }
+  ]
+}
